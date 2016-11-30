@@ -1,10 +1,9 @@
 package main
 
 import (
-	"./db"
-	"fmt"
+	"./api"
 )
 
 func main() {
-	fmt.Println(db.Read())
+	api.Read()
 }
