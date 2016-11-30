@@ -9,8 +9,8 @@ import (
 
 // 構造体の定義
 type Apival struct {
-	name string
-	pass string
+	Name string `json:"name"`
+	Pass string `json:"pass"`
 }
 
 func Read() []Apival {
@@ -78,8 +78,8 @@ func Read() []Apival {
 		if err != nil {
 			panic(err.Error())
 		}
-		users[i].name = name
-		users[i].pass = pass
+		users[i].Name = name
+		users[i].Pass = pass
 		i++
 	}
 

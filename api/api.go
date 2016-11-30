@@ -6,22 +6,14 @@ import (
   "net/http"
   "github.com/ant0ine/go-json-rest/rest"
   "log"
+	"encoding/json"
 )
-
-// type User struct{
-//   name string
-//   pass string
-// }
 
 func Read(){
 
-  // users := make([]User, 2)
-
-  i := 0
   for _, user := range db.Read(){
-    // users[i] = *user
-      fmt.Println(user)
-    i++
+			bs, _ := json.Marshal(user)
+			fmt.Println(string(bs))
   }
 
   // fmt.Println(users)
